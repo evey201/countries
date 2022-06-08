@@ -23,6 +23,13 @@ export const ActionsContainer = styled.div`
   }
 `;
 
+export const InputWrapper = styled.div`
+  width: 30%;
+  @media (max-width: 375px) {
+    width: 100%;
+  }
+`
+
 export const ButtonWrapper = styled.div`
   width: 20%;
   @media (max-width: 375px) {

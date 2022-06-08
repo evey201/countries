@@ -5,6 +5,7 @@ import { fetchAllCountries } from "./services";
 import {
   Container,
   ActionsContainer,
+  InputWrapper,
   ButtonWrapper,
   Button,
   CardContainer,
@@ -31,7 +32,7 @@ export const App = () => {
       <Header title="Where in the world?" />
       <Container>
         <ActionsContainer>
-          <SearchInput placeholder="search for a new country..." />
+          <InputWrapper><SearchInput placeholder="Search for a new country..." /></InputWrapper>
           <ButtonWrapper>
             <Button>
               Filter by region <ArrowIcon height="25px" width="25px" />
