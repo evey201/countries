@@ -1,12 +1,11 @@
-import axios from 'axios'
+import axios from "axios";
 
-const setUp = {
-    baseUrl: 'https://restcountries.com/v2',
-    headers: {
-        Accept: 'application/json,text/plain,*/*',
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json',
-    },
-}
+const options = {
+  baseURL: `https://restcountries.com/v3.1`,
+  headers: {
+    Accept: "application/json,text/plain,*/*",
+    "Content-Type": "application/json",
+  },
+};
 
-export const request = axios.create(setUp)
+export const request = axios.create(options);
