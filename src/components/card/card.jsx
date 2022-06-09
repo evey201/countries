@@ -1,3 +1,4 @@
+import { useHistory } from 'react-router-dom'
 import {
   OverallContainer,
   Image,
@@ -6,31 +7,37 @@ import {
   Title,
   Number,
   SpanTag,
+  Route
 } from "./card.styled";
 
-export const Card = () => {
+export const Card = ({ name, population, region, images, capital }) => {
   return (
     <>
       <OverallContainer>
-        <Image alt="flag" src={require("./sample.jpg")} />
+        {/* <Route to='/move'><Image alt="flag" src={require("./sample.jpg")} /></Route> */}
+        <Route to='/move'><Image alt="flag" src={ images } /></Route>
         <DescriptionContainer>
-          <Name>Germany</Name>
+          {/* <Name>Germany</Name> */}
+          <Name>{ name }</Name>
           <Title>
             Population:{" "}
             <SpanTag>
-              <Number>19,55565</Number>
+              {/* <Number>19,55565</Number> */}
+              <Number>{population}</Number>
             </SpanTag>
           </Title>
           <Title>
             Region:{" "}
             <SpanTag>
-              <Number>Europe</Number>
+              <Number>{ region }</Number>
+              {/* <Number>Europe</Number> */}
             </SpanTag>
           </Title>
           <Title>
             Capital:{" "}
             <SpanTag>
-              <Number>Berlin</Number>
+              <Number>{ capital }</Number>
+              {/* <Number>Berlin</Number> */}
             </SpanTag>
           </Title>
         </DescriptionContainer>

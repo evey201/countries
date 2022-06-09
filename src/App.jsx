@@ -13,26 +13,31 @@ import {
 
 export const App = () => {
   const [loading, setLoading] = useState(false);
-
+  const [data, setData] = useState([]);
   useEffect(() => {
     const getData = async () => {
       setLoading(true);
-      const res = await fetchAllCountries()
-      console.log(res)
-      setLoading(false)
+      const res = await fetchAllCountries();
+      setData(res);
+      // console.log("useEffect", res);
+      setLoading(false);
     };
-    getData()
+    getData();
   }, []);
+  
 
-  if(loading) {
-    return 'Loading...'
+  if (loading) {
+    return "Loading...";
   }
+  console.log("useState", data);
   return (
     <>
       <Header title="Where in the world?" />
       <Container>
         <ActionsContainer>
-          <InputWrapper><SearchInput placeholder="Search for a new country..." /></InputWrapper>
+          <InputWrapper>
+            <SearchInput placeholder="Search for a new country..." />
+          </InputWrapper>
           <ButtonWrapper>
             <Button>
               Filter by region <ArrowIcon height="25px" width="25px" />
@@ -40,7 +45,17 @@ export const App = () => {
           </ButtonWrapper>
         </ActionsContainer>
         <CardContainer>
-          <Card />
+          {data.map((product, index) => (
+            <Card
+              key={index}
+              name={product?.name?.common}
+              region={product?.region}
+              capital={product?.capital}
+              population={product?.population}
+              images={product?.flags?.png}
+            />
+          ))}
+          {/* <Card /> */}
         </CardContainer>
       </Container>
     </>

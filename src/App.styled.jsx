@@ -51,6 +51,10 @@ export const Button = styled.button`
 
 export const CardContainer = styled.div`
   margin: 3rem 40px;
+  dısplay: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
 
   @media (max-width: 375px) {
     display: flex;

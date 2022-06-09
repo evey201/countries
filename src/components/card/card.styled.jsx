@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom'
 
 export const OverallContainer = styled.div`
   margin: 5px;
@@ -40,4 +41,8 @@ export const Number = styled.p`
 export const SpanTag = styled.span`
     display: inline-block;
     margin: 0px;
+`
+
+export const Route = styled(Link)`
+  
 `
