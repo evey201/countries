@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: whitesmoke;
-  border: 1px solid whitesmoke;
-  height: 100vh;
-  max-height: 100%;
+  background: #F5F5F5;
+  border: 1px solid #F5F5F5;
 `;
 
 export const ActionsContainer = styled.div`
@@ -49,16 +47,20 @@ export const Button = styled.button`
   justify-content: space-between;
 `;
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.ul`
   margin: 3rem 40px;
-  dısplay: flex;
-  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  list-style: none;
+  padding-right: 20px;
+  padding-left: 20px;
 
 
   @media (max-width: 375px) {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
   }
 `

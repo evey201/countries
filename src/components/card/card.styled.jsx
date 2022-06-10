@@ -1,21 +1,25 @@
 import styled from "styled-components";
 import { Link } from 'react-router-dom'
 
-export const OverallContainer = styled.div`
+export const OverallContainer = styled.li`
   margin: 5px;
   border: 1px solid #ccc;
   float: left;
   width: 200px;
+  margin: 20px 0;
   background: white;
 
   &.hover {
     cursor: pointer;
   }
+  @media (max-width: 375px) {
+    width: 100%;
+  }
 `;
 
 export const Image = styled.img`
   width: 100%;
-  height: auto;
+  height: 150px;
   ${'' /* padding-bottom: 5px; */}
 `;
 
