@@ -15,14 +15,16 @@ export const Home = () => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
   useEffect(() => {
-    const getData = async () => {
-      setLoading(true);
-      const res = await fetchAllCountries();
-      setData(res);
-      // console.log("useEffect", res);
-      setLoading(false);
-    };
-    getData();
+      setTimeout(
+        async () => {
+            setLoading(true);
+            const res = await fetchAllCountries();
+            setData(res);
+            // console.log("useEffect", res);
+            setLoading(false);
+        }, 5000
+      )
+    
   }, []);
 
   if (loading) {
@@ -43,7 +45,7 @@ export const Home = () => {
           </ButtonWrapper>
         </ActionsContainer>
         <CardContainer>
-          {data.map((product, index) => (
+          {data && data.map((product, index) => (
             <Card
               key={index}
               name={product?.name?.common}
