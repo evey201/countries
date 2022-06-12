@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: #F5F5F5;
-  border: 1px solid #F5F5F5;
+  background-color: ${({ theme }) => theme.colors.veryDarkBlue};
+  border: 1px solid ${({ theme }) => theme.colors.veryDarkBlue};
+  height: auto;
 `;
 
 export const ActionsContainer = styled.div`

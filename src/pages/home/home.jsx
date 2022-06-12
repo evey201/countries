@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {  Card, Filters } from "../../components";
+import {  Card, Filters, SkeletonElement } from "../../components";
 import { useCountries } from '../../hooks'
 import {
   Container,
@@ -25,7 +25,7 @@ export const Home = () => {
           handleitemChanged={handleSelectedItemChange}
         />
         <CardContainer>
-          {countries && 
+          {countries ? 
             countries.filter((country) => country.name.common.toLowerCase().includes(inputValue.toLowerCase()))
             .filter((country) => {
               return country.continents.some((continent) => continent.toLowerCase().includes(selectedValue.toLowerCase()));
@@ -39,7 +39,15 @@ export const Home = () => {
               population={product?.population}
               images={product?.flags?.png}
             />
-          ))}
+          )) : (
+            <>
+              {
+                [1, 2, 3, 4 ,5 , 6,7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24].map((skeleton) => (
+                <SkeletonElement key={skeleton} width="200px" height="180px" />
+              ))
+              }
+            </>
+          )}
         </CardContainer>
       </Container>
     </>

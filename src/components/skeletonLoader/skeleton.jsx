@@ -1,10 +1,9 @@
 import { SkeletonContainer } from './skeleton.styled'
 
-export const SkeletonElement = ({ type, width, height}) => {
-    const classes = `${type}`
+export const SkeletonElement = ({  width, height}) => {
     return (
         <>
-            <SkeletonContainer width={width} height={height} >dd</SkeletonContainer>
+            <SkeletonContainer width={width} height={height} ></SkeletonContainer>
         </>
     );
 }
