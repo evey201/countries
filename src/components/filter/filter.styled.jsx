@@ -1,0 +1,81 @@
+import styled from "styled-components";
+
+export const ActionsContainer = styled.div`
+  margin: 3rem 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+
+
+  @media (max-width: 375px) {
+    margin: 3rem 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+`;
+
+
+export const InputWrapper = styled.div`
+  width: 30%;
+  background-color: ${({ theme }) => theme.colors.darkBlue};
+  color: ${({ theme }) => theme.colors.white};
+  @media (max-width: 375px) {
+    width: 100%;
+    background-color: ${({ theme }) => theme.colors.darkBlue};
+    color: ${({ theme }) => theme.colors.white};
+  }
+`
+
+export const ButtonWrapper = styled.div`
+  width: 20%;
+  
+  @media (max-width: 375px) {
+    width: 50%;
+    padding-top: 30px;
+  }
+`
+
+export const CustomButton = styled.button`
+  background-color: ${({ theme }) => theme.colors.darkBlue};
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  color: ${({ theme }) => theme.colors.white};
+  font-size: ${({ theme }) => theme.fontSize.small};
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const DropdownMenu = styled.ul`
+  position: absolute;
+  top: 180px;
+  background-color: ${({ theme }) => theme.colors.darkBlue};
+  list-style: none;
+  padding: 0;
+  width: 180px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.15);
+  z-index: 20;
+  
+  
+  @media (max-width: 375px) {
+    top: 250px;
+    width: 170px;
+  }
+`;
+
+export const MenuItem = styled.li`
+  font-size: ${({ theme }) => theme.fontSize.small};
+  color: ${({ theme }) => theme.colors.white};
+  padding: 12px 20px;
+  margin: 5px 0;
+  font-weight: 600;
+  background-color: ${({ theme, isHighlighted }) => (isHighlighted ? theme.colors.veryDarkBlue : theme.colors.darkBlue)}; ;
+`;

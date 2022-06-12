@@ -6,12 +6,12 @@ export const Wrapper = styled.header`
   background-color: ${({ theme }) => theme.colors.darkBlue};
   color: ${({ theme }) => theme.colors.white};
   justify-content: space-between;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
   padding-top: 20px;
   padding-bottom: 20px;
   align-items: center;
-  z-index: 10;
+  z-index: 1;
 
   @media (max-width: 375px) {
     display: flex;

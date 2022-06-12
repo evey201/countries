@@ -1,32 +1,36 @@
-import React from "react";
-import { SearchInput, Card } from "../../components";
-import { ReactComponent as ArrowIcon } from "../../assets/icons/arrow.svg";
+import React, {useState} from "react";
+import {  Card, Filters } from "../../components";
+import { useCountries } from '../../hooks'
 import {
   Container,
-  ActionsContainer,
-  InputWrapper,
-  ButtonWrapper,
-  Button,
   CardContainer,
 } from "./home.styled";
 
 export const Home = () => {
+  const { countries, state } = useCountries();
+  const [selectedValue, setSelectedValue] = useState('');
+  const [inputValue, setInputValue] = useState('');
+
+  const  handleSelectedItemChange = ({ selectedItem }) => {
+    setSelectedValue(selectedItem);
+  }
+  console.log('in home', countries)
   return (
     <>
       <Container>
-        <ActionsContainer>
-          <InputWrapper>
-            <SearchInput placeholder="Search for a new country..." />
-          </InputWrapper>
-          <ButtonWrapper>
-            <Button>
-              Filter by region <ArrowIcon height="25px" width="25px" />
-            </Button>
-          </ButtonWrapper>
-        </ActionsContainer>
-        {/* <SkeletonElement type="title" /> */}
-        {/* <CardContainer>
-          {data && data.map((product, index) => (
+        <Filters 
+          selectedValue={selectedValue}
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+          handleitemChanged={handleSelectedItemChange}
+        />
+        <CardContainer>
+          {countries && 
+            countries.filter((country) => country.name.common.toLowerCase().includes(inputValue.toLowerCase()))
+            .filter((country) => {
+              return country.continents.some((continent) => continent.toLowerCase().includes(selectedValue.toLowerCase()));
+            })
+            .map((product, index) => (
             <Card
               key={index}
               name={product?.name?.common}
@@ -36,7 +40,7 @@ export const Home = () => {
               images={product?.flags?.png}
             />
           ))}
-        </CardContainer> */}
+        </CardContainer>
       </Container>
     </>
   );
