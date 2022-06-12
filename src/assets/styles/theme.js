@@ -25,5 +25,6 @@ export const lightTheme = {
         veryDarkBlue: 'white',
         darkishBlue: 'white',
         lightModeDarkBlue: '#FAFAFA',
+        darkGray: 'hsl(0, 0%, 52%)',
     }
 }

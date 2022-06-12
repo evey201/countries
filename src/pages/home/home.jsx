@@ -11,6 +11,10 @@ export const Home = () => {
   const [selectedValue, setSelectedValue] = useState('');
   const [inputValue, setInputValue] = useState('');
 
+  const addCommaToNumber= (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
   const  handleSelectedItemChange = ({ selectedItem }) => {
     setSelectedValue(selectedItem);
   }
@@ -36,7 +40,7 @@ export const Home = () => {
               name={product?.name?.common}
               region={product?.region}
               capital={product?.capital}
-              population={product?.population}
+              population={addCommaToNumber(product?.population)}
               images={product?.flags?.png}
             />
           )) : (

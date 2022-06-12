@@ -30,6 +30,7 @@ export const TitleWrapper = styled.div``;
 export const Title = styled.h1`
   font-size: 16px;
   font-weight: 800;
+  cursor: pointer;
   @media (max-width: 375px) {
     font-weight: 800;
     font-size: 14px;
