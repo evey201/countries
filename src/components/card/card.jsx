@@ -1,4 +1,3 @@
-import { useHistory } from 'react-router-dom'
 import {
   OverallContainer,
   Image,
@@ -14,8 +13,7 @@ export const Card = ({ name, population, region, images, capital }) => {
   return (
     <>
       <OverallContainer>
-        {/* <Route to='/move'><Image alt="flag" src={require("./sample.jpg")} /></Route> */}
-        <Route to='/move'><Image alt="flag" src={ images } /></Route>
+        <Route to={`country/${name}`}><Image alt="flag" src={ images } /></Route>
         <DescriptionContainer>
           {/* <Name>Germany</Name> */}
           <Name>{ name }</Name>
