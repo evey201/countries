@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+html{ 
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+    transition: background-color 100ms;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    min-height: 100vh;
+}
+
+a, button{
+    font-family: inherit;
+}

@@ -1,12 +1,10 @@
-import { Skeleton } from './skeleton.styled'
+import { SkeletonContainer } from './skeleton.styled'
 
-export const SkeletonLoader = ({ type }) => {
-    const classes = `skeleton ${type}`
+export const SkeletonElement = ({ type, width, height}) => {
+    const classes = `${type}`
     return (
         <>
-            <Skeleton className={classes}>
-                vcjv
-            </Skeleton>
+            <SkeletonContainer width={width} height={height} >dd</SkeletonContainer>
         </>
     );
 }

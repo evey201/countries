@@ -3,13 +3,15 @@ import styled from "styled-components";
 export const Wrapper = styled.header`
   position: relative;
   display: flex;
+  background-color: ${({ theme }) => theme.colors.darkBlue};
+  color: ${({ theme }) => theme.colors.white};
   justify-content: space-between;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   padding-top: 20px;
   padding-bottom: 20px;
   align-items: center;
-  z-index: 1;
+  z-index: 10;
 
   @media (max-width: 375px) {
     display: flex;
@@ -19,6 +21,8 @@ export const Wrapper = styled.header`
     padding-top: 20px;
     padding-bottom: 20px;
     align-items: center;
+    background-color: ${({ theme }) => theme.colors.darkBlue};
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
@@ -39,6 +43,8 @@ export const Button = styled.button`
   outline: none;
   background-color: white;
   align-items: center;
-  border: hidden;
   cursor: pointer;
+  background-color: ${({ theme }) => theme.colors.darkBlue};
+  border: none;
+  color: ${({ theme }) => theme.colors.white};
 `;

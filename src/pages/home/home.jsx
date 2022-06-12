@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { SearchInput, Card } from "../../components";
 import { ReactComponent as ArrowIcon } from "../../assets/icons/arrow.svg";
 import { fetchAllCountries } from "../../services";
@@ -15,14 +15,14 @@ export const Home = () => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
   useEffect(() => {
+    setLoading(true);
       setTimeout(
         async () => {
-            setLoading(true);
             const res = await fetchAllCountries();
             setData(res);
             // console.log("useEffect", res);
             setLoading(false);
-        }, 5000
+        }, 1000
       )
     
   }, []);
@@ -44,6 +44,7 @@ export const Home = () => {
             </Button>
           </ButtonWrapper>
         </ActionsContainer>
+        {/* <SkeletonElement type="title" /> */}
         <CardContainer>
           {data && data.map((product, index) => (
             <Card
