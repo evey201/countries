@@ -25,7 +25,7 @@ export const Home = () => {
           handleitemChanged={handleSelectedItemChange}
         />
         <CardContainer>
-          {countries ? 
+          {state === 'resolved' ? 
             countries.filter((country) => country.name.common.toLowerCase().includes(inputValue.toLowerCase()))
             .filter((country) => {
               return country.continents.some((continent) => continent.toLowerCase().includes(selectedValue.toLowerCase()));

@@ -13,7 +13,7 @@ const loading = keyframes`
 
 export const SkeletonContainer = styled.div`
   background-color: ${({ theme }) =>
-    theme.colors.darkGray || theme.colors.darkBlue};
+    theme.colors.darkGray};
   border-radius: 4px;
 
   animation: ${loading} 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
