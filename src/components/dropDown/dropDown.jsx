@@ -1,5 +1,5 @@
 import React, { useRef, useCallback, useEffect } from 'react';
-import { ThreeDot, MenuGroup, Menu } from './dropDown.styled';
+import { MenuGroup, Menu } from './dropDown.styled';
 
 export const Dropdown = ({ open, setIsOpen, children, trigger }) => {
     const menuDropDownRef = useRef()
