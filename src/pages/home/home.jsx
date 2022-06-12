@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { SearchInput, Card } from "../../components";
 import { ReactComponent as ArrowIcon } from "../../assets/icons/arrow.svg";
-import { fetchAllCountries } from "../../services";
 import {
   Container,
   ActionsContainer,
@@ -12,25 +11,6 @@ import {
 } from "./home.styled";
 
 export const Home = () => {
-  const [loading, setLoading] = useState(false);
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    setLoading(true);
-      setTimeout(
-        async () => {
-            const res = await fetchAllCountries();
-            setData(res);
-            // console.log("useEffect", res);
-            setLoading(false);
-        }, 1000
-      )
-    
-  }, []);
-
-  if (loading) {
-    return "Loading...";
-  }
-  console.log("useState", data);
   return (
     <>
       <Container>
@@ -45,7 +25,7 @@ export const Home = () => {
           </ButtonWrapper>
         </ActionsContainer>
         {/* <SkeletonElement type="title" /> */}
-        <CardContainer>
+        {/* <CardContainer>
           {data && data.map((product, index) => (
             <Card
               key={index}
@@ -56,8 +36,7 @@ export const Home = () => {
               images={product?.flags?.png}
             />
           ))}
-          {/* <Card /> */}
-        </CardContainer>
+        </CardContainer> */}
       </Container>
     </>
   );
