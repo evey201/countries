@@ -30,6 +30,7 @@ export const InputWrapper = styled.div`
 
 export const ButtonWrapper = styled.div`
   width: 20%;
+  position: relative;
   
   @media (max-width: 375px) {
     width: 50%;
@@ -39,6 +40,7 @@ export const ButtonWrapper = styled.div`
 
 export const CustomButton = styled.button`
   background-color: ${({ theme }) => theme.colors.darkBlue};
+  cursor: pointer;
   width: 100%;
   height: 50px;
   border-radius: 5px;
@@ -47,6 +49,7 @@ export const CustomButton = styled.button`
   font-size: ${({ theme }) => theme.fontSize.small};
   text-align: left;
   padding-left: 20px;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.15);
   font-weight: 600;
   display: flex;
   justify-content: space-between;
@@ -55,11 +58,11 @@ export const CustomButton = styled.button`
 
 export const DropdownMenu = styled.ul`
   position: absolute;
-  top: 180px;
+  top: 40px;
   background-color: ${({ theme }) => theme.colors.darkBlue};
   list-style: none;
   padding: 0;
-  width: 180px;
+  width: 100%;
   border-radius: 5px;
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.15);
   z-index: 20;

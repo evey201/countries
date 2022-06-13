@@ -32,6 +32,7 @@ export const Filters = ({
     selectedItem: selectedValue,
     onSelectedItemChange: handleitemChanged,
   });
+
   return (
     <>
       <ActionsContainer>
