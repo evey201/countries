@@ -22,7 +22,7 @@ export const lightTheme = {
     ...theme,
     colors : {
         white: 'hsl(200, 15%, 8%)',
-        veryDarkBlue: 'hsl(0, 0%, 98%)',
+        veryDarkBlue: '#F5F5F5',
         darkBlue: 'white',
         lightModeDarkBlue: '#FAFAFA',
         darkGray: 'hsl(0, 0%, 52%)',
