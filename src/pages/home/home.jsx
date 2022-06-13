@@ -18,7 +18,7 @@ export const Home = () => {
   const  handleSelectedItemChange = ({ selectedItem }) => {
     setSelectedValue(selectedItem);
   }
-  console.log('in home', countries)
+  // console.log('in home', countries)
   return (
     <>
       <Container>

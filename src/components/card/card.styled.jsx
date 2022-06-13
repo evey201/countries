@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const OverallContainer = styled.li`
+export const OverallContainer = styled.div`
   margin: 5px;
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.15);
   transition: transform ease-in 100ms;

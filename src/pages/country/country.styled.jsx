@@ -69,7 +69,7 @@ export const CustomButton = styled.button`
   justify-content: space-evenly;
   border: none;
   color: ${({ theme }) => theme.colors.white};
-  padding: 16px 35px;
+  padding: 10px;
   border-radius: 5px;
   font-weight: ${({ theme }) => theme.fontWeight.slim};
   font-size: ${({ theme }) => theme.fontSize.medium};

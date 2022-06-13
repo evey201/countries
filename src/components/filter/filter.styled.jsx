@@ -14,6 +14,13 @@ export const ActionsContainer = styled.div`
     flex-direction: column;
     align-items: start;
   }
+  @media (min-width: 375px) and (max-width: 450px) {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5px; 
+    align-items: start;
+  }
 `;
 
 
@@ -21,7 +28,7 @@ export const InputWrapper = styled.div`
   width: 30%;
   background-color: ${({ theme }) => theme.colors.darkBlue};
   color: ${({ theme }) => theme.colors.white};
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     width: 100%;
     background-color: ${({ theme }) => theme.colors.darkBlue};
     color: ${({ theme }) => theme.colors.white};
@@ -32,7 +39,7 @@ export const ButtonWrapper = styled.div`
   width: 20%;
   position: relative;
   
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     width: 50%;
     padding-top: 30px;
   }
@@ -58,6 +65,7 @@ export const CustomButton = styled.button`
 
 export const DropdownMenu = styled.ul`
   position: absolute;
+  cursor: pointer;
   top: 40px;
   background-color: ${({ theme }) => theme.colors.darkBlue};
   list-style: none;
@@ -68,7 +76,7 @@ export const DropdownMenu = styled.ul`
   z-index: 20;
   
   
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     top: 70px;
     
   }

@@ -24,6 +24,10 @@ export const Wrapper = styled.header`
     background-color: ${({ theme }) => theme.colors.darkBlue};
     color: ${({ theme }) => theme.colors.white};
   }
+
+  @media (min-width: 375px) and (max-width: 450px) {
+    padding: 15px 5px; 
+  }
 `;
 
 export const TitleWrapper = styled.div``;
