@@ -4,11 +4,10 @@ export const OverallContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.veryDarkBlue};
   padding: 50px;
   color: ${({ theme }) => theme.colors.white};
-  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
 
-  @media (max-width: 800px) {
-    height: auto;
-  }
+  
 `;
 
 export const InfoContainer = styled.div`
