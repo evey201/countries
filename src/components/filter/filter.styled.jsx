@@ -69,8 +69,8 @@ export const DropdownMenu = styled.ul`
   
   
   @media (max-width: 375px) {
-    top: 250px;
-    width: 170px;
+    top: 70px;
+    
   }
 `;
 

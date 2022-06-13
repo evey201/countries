@@ -27,9 +27,10 @@ export const Header = ({ title, currentTheme, toggleTheme  }) => {
                 <ButtonWrapper>
                     <Button onClick={toggleTheme} >
                     { 
-                        isLightThemeActive ? <LightIcon height="25px" width="25px" /> : <MoonIcon height="25px" width="25px" />
+                        isLightThemeActive ? <MoonIcon height="18px" width="25px" /> : <LightIcon height="18px" width="25px" />
                     }
-                     { isLightThemeActive ? 'Light Mode' : 'Dark Mode'}</Button>
+                    {" "}
+                     { isLightThemeActive ? 'Dark Mode' : 'Light Mode'}</Button>
                 </ButtonWrapper>
             </Wrapper>
         </>

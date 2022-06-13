@@ -2,6 +2,7 @@ import React, {useMemo} from 'react';
 import { BasicInfo } from '../../components';
 import { BorderCountry } from './borderCountry';
 import { useParams, useNavigate } from 'react-router-dom'
+import { ReactComponent as ArrowBack } from "../../assets/icons/arrow-back.svg";
 import { useCountries } from "../../hooks";
 import { 
     OverallContainer,
@@ -41,7 +42,7 @@ export const CountryDetails = () => {
     return ( 
         <>
             <OverallContainer>
-                <CustomButton onClick={goBack}>Back</CustomButton>
+                <CustomButton onClick={goBack}><span><ArrowBack height='18px' width='25px' /></span>Back</CustomButton>
                 <InfoContainer>
                     <Image src={country?.flags?.png} alt="flag" />
                     <Info>

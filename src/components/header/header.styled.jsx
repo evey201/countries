@@ -48,4 +48,6 @@ export const Button = styled.button`
   background-color: ${({ theme }) => theme.colors.darkBlue};
   border: none;
   color: ${({ theme }) => theme.colors.white};
+  font-size: ${({ theme }) => theme.fontSize.medium};
+  font-weight: 600;
 `;

@@ -45,14 +45,14 @@ export const Filters = ({
         </InputWrapper>
         <ButtonWrapper>
             <CustomButton type="button" {...getToggleButtonProps()} >
-                {selectedItem || 'All Countries'}
+                {selectedItem || 'Filter by Region'}
             <span><ArrowIcon height='25px' width='25px' /></span>
             </CustomButton>
             <DropdownMenu {...getMenuProps()}>
                 {
                     isOpen && items.map((item, index) => (
                         <MenuItem isHighlighted={highlightedIndex === index} key={`${item}${index}`} {...getItemProps({ item, index })} >
-                            {item || 'All Countries'}
+                            {item || 'Filter by Region'}
                         </MenuItem>
                     ))
                 }
