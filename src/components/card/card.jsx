@@ -6,17 +6,22 @@ import {
   Title,
   Number,
   SpanTag,
-  Route
+  Route,
+  ImageContainer,
 } from "./card.styled";
 
 export const Card = ({ name, population, region, images, capital }) => {
   return (
     <>
       <OverallContainer>
-        <Route to={`country/${name}`}><Image alt="flag" src={ images } /></Route>
+        <ImageContainer>
+          <Route to={`country/${name}`}>
+            <Image alt="flag" src={images} />
+          </Route>
+        </ImageContainer>
         <DescriptionContainer>
           {/* <Name>Germany</Name> */}
-          <Name>{ name }</Name>
+          <Name>{name}</Name>
           <Title>
             Population:{" "}
             <SpanTag>
@@ -27,14 +32,14 @@ export const Card = ({ name, population, region, images, capital }) => {
           <Title>
             Region:{" "}
             <SpanTag>
-              <Number>{ region }</Number>
+              <Number>{region}</Number>
               {/* <Number>Europe</Number> */}
             </SpanTag>
           </Title>
           <Title>
             Capital:{" "}
             <SpanTag>
-              <Number>{ capital }</Number>
+              <Number>{capital}</Number>
               {/* <Number>Berlin</Number> */}
             </SpanTag>
           </Title>
