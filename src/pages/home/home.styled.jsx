@@ -57,7 +57,7 @@ export const CardContainer = styled.div`
   list-style: none;
   padding-right: 20px;
   padding-left: 20px; */}
-    margin-bottom: 1rem;
+    margin: 3rem;
     display: grid;
     grid-auto-flow: row;
     justify-content: space-evenly;
